@@ -1,0 +1,13 @@
+#credential templates
+apiVersion: v1
+kind: Secret
+metadata:
+  name: private-repo-creds-https
+  namespace: argocd
+  labels:
+    argocd.argoproj.io/secret-type: repo-creds
+  stringData:
+    type: git
+    url: https://github.com/dsincennes
+    password: password123test
+    username: my-token
